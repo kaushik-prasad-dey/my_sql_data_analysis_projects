@@ -74,3 +74,8 @@ select age,if(age>40,'Yes','No') as agegreater_40 from
 Patient_Diagnosis_Report.patients;
 
 /* 14. Write a query to display the doctor’s duplicate name from the table. */
+select doctor_name,count(*) occurences from 
+Patient_Diagnosis_Report.patients 
+GROUP BY 
+doctor_name 
+HAVING COUNT(*)>1;
