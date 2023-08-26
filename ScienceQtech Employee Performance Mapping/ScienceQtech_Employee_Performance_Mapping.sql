@@ -203,4 +203,12 @@ FROM employee.emp_record;
 
 /* 17. Write a query to calculate the average salary distribution based on the continent and country. Take data from the
 employee record table. */
+SELECT continent, AVG(salary)
+FROM employee.emp_record
+GROUP BY continent
+ORDER BY continent ASC;
 
+SELECT country, AVG(salary)
+FROM employee.emp_record
+GROUP BY country
+ORDER BY country ASC;
